@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav-stripes',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavStripesComponent implements OnInit {
 
-  open:boolean = false;
+  @Input()
+  open:boolean;
+
+  @Output()
+  openEvent:EventEmitter<boolean> = new EventEmitter();
+  
 
   classOpen:string = '';
 
@@ -20,6 +25,7 @@ export class NavStripesComponent implements OnInit {
   {
     this.open = !this.open;
     this.classOpen = this.open? 'turned': '';
+    this.openEvent.emit(this.open)
   }
    
 }

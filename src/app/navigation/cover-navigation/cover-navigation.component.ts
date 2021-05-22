@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoverNavigationComponent implements OnInit {
 
+  open:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openClose(event)
+  {
+    this.open = event;
   }
 
 }

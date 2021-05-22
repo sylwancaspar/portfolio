@@ -1,2 +1,42 @@
-<p>cover-navigation works!</p>
-<app-nav-stripes></app-nav-stripes>
+
+<app-nav-stripes
+    [open]="open"
+    (openEvent)="openClose($event)"
+></app-nav-stripes>
+<div class="coverSidesBox">
+    <div class="coverSides">{{ open }}</div>
+    <div class="coverSides">
+        <ul>
+            <li class="nav-item current" >
+                <a 
+                    class="nav-link"
+                    routerLink="/">
+                  Hem  
+                </a>
+            </li>
+            <li 
+                class="nav-item">
+                <a 
+                    class="nav-link"
+                    routerLink="/">  
+                    Projekt
+                </a>
+            </li>
+            <li 
+                class="nav-item">
+                <a 
+                    class="nav-link"
+                    routerLink="/"> 
+                    Om mig
+                </a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link"
+                    routerLink="/">  
+                    Kontakt
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
