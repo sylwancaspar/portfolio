@@ -1,0 +1,42 @@
+.navboxStripes
+{
+    position: absolute;
+    right: 20px;
+    padding: 0 0 0 0;
+    cursor: pointer;
+
+    .navStripes
+    {
+        width: 3rem;
+        height: 5px;
+        background: white;
+        border-radius: 5px;
+        margin-top: 5px;
+
+        transition: transform 1s , opacity 1s;
+
+        &.turned
+        {
+
+            &:nth-child(1)
+            {
+                transform: rotate(-45deg) translate(-19px, 7px);
+            }
+
+            &:nth-child(2)
+            {
+                transform: rotate(45deg) translate(-0px, 11px);
+            }
+
+            &:nth-child(3)
+            {
+                opacity: 0;
+            }
+        }
+    
+    }
+
+    
+}
+
+
