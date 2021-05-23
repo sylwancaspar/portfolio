@@ -6,7 +6,8 @@
     position:fixed;
     top:0;
     width: 100%;
-    opacity: 0.80;
+    //opacity: 0.80;
+    z-index: 3;
     display: flex;
     
      .coverSides
@@ -21,12 +22,12 @@
 
         &:nth-child(1)
         {
-          background-color: lighten( $primary-color , 5);
+          background-color: rgba(darken( $primary-color , 5), .9) ;
         }
 
-        &:nth-child(1)
+        &:nth-child(2)
         {
-           background-color: lighten( $primary-color , 5);
+           background-color: rgba(lighten( $primary-color , 5), .7) ;
         }
 
         &.show
@@ -48,47 +49,7 @@
          }
 
 
-     }
-        
-    //      width: 50%;
-    //      min-height: 100vh;
-    //      display: flex;
-    //      flex-direction: column;
-        
-    //     @include easeOut;
-
-    //     &:nth-child(1)
-    //     {
-    //         //display: inline-block;
-    //         background-color: lighten( $primary-color , 5);
-    //     }
-
-    //     &:nth-child(2)
-    //     {
-            
-    //         background-color: darken( $primary-color , 5);
-    //     }
-
-    //     &.show
-    //     {
-    //         transform: translate3d(0px,0px,0);
-           
-    //     }
-
-    //     &.close
-    //     {
-    //         &:nth-child(1)
-    //         {
-    //             transform: translate3d(0px, 100%,0);
-    //         }
-    //         &:nth-child(2)
-    //         {
-    //             transform: translate3d(0px, -100%,0);
-    //         }
-           
-    //     }
-        
-    // }
+     }       
 }
 
 .nav-item{
@@ -127,3 +88,19 @@
       transition-delay: $x * 0.1s;
     }
   }
+
+//Page 2 photo
+
+.portraite
+{
+  height: 15rem;
+  width:  15rem;
+  border-radius: 100%;
+  border:solid $secondary-color 3px;
+
+  background-image: url("../../../assets/img/portrait/caspar.png");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
