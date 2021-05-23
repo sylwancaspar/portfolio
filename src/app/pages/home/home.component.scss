@@ -1,0 +1,67 @@
+@import "../../../scss/color";
+@import "../../../scss/config";
+
+
+.homeContainer
+{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $primary-color;
+
+    .presentation
+    {
+        width: 65%;
+        background-color: darken($primary-color, 5);
+        border-top-right-radius: 15rem;
+        border-bottom-right-radius: 15rem;
+
+        padding-left: 2rem;
+
+        .lg-heading{
+            color:white;
+        }
+
+        .text-secondary
+        {
+            color: $secondary-color;
+        }
+    }
+}
+
+h1,
+h2,
+h3{
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading{
+    font-size:6rem;
+  }
+  &.sm-heading{
+    margin-bottom: 1rem;
+    padding: 0.2rem 1rem;
+    color:#fff;
+    font-size:1.5rem;
+    //background:rgba( lighten($primary-color, 2),0.5);
+  }
+}
+
+a{
+	color:#fff;
+	text-decoration: none;
+  }
+
+.icons{
+    margin-bottom: 1rem;
+
+    a{
+      padding: 0.4rem;
+
+      &:hover{
+        color: $secondary-color;
+        @include easeOut();
+        
+      }
+    }
+  }

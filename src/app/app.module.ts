@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoverNavigationComponent } from './navigation/cover-navigation/cover-navigation.component';
 import { NavStripesComponent } from './navigation/nav-stripes/nav-stripes.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoverNavigationComponent,
-    NavStripesComponent
+    NavStripesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

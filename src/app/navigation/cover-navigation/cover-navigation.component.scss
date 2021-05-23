@@ -1,52 +1,94 @@
 @import "../../../scss/config";
 @import "../../../scss/color";
 
-.coverSidesBox
+.menu
 {
+    position:fixed;
+    top:0;
+    width: 100%;
+    opacity: 0.80;
     display: flex;
-    flex-direction: row;
-    justify-content: stretch;
     
-    
-    .coverSides
-    {
+     .coverSides
+     {
+        border: solid black 1px;
+        height: 100vh;
+        width:50%;
         display: flex;
-        width: 50%;
-        min-height: 100vh;
         justify-content: center;
         align-items: center;
         @include easeOut;
 
         &:nth-child(1)
         {
-            background-color: lighten( $primary-color , 5);
+          background-color: lighten( $primary-color , 5);
         }
 
-        &:nth-child(2)
+        &:nth-child(1)
         {
-            background-color: darken( $primary-color , 5);
+           background-color: lighten( $primary-color , 5);
         }
 
         &.show
         {
-            transform: translate3d(0px,0px,0);
-           
+            transform: translate3d(0px,0px,0);           
         }
 
         &.close
         {
             &:nth-child(1)
             {
-                transform: translate3d(0px, 150vh,0);
+                transform: translate3d(0px, 100%,0);
             }
             &:nth-child(2)
             {
-                transform: translate3d(0px, -150vh,0);
+                transform: translate3d(0px, -100%,0);
             }
            
-        }
+         }
+
+
+     }
         
-    }
+    //      width: 50%;
+    //      min-height: 100vh;
+    //      display: flex;
+    //      flex-direction: column;
+        
+    //     @include easeOut;
+
+    //     &:nth-child(1)
+    //     {
+    //         //display: inline-block;
+    //         background-color: lighten( $primary-color , 5);
+    //     }
+
+    //     &:nth-child(2)
+    //     {
+            
+    //         background-color: darken( $primary-color , 5);
+    //     }
+
+    //     &.show
+    //     {
+    //         transform: translate3d(0px,0px,0);
+           
+    //     }
+
+    //     &.close
+    //     {
+    //         &:nth-child(1)
+    //         {
+    //             transform: translate3d(0px, 100%,0);
+    //         }
+    //         &:nth-child(2)
+    //         {
+    //             transform: translate3d(0px, -100%,0);
+    //         }
+           
+    //     }
+        
+    // }
 }
 
 .nav-item{
@@ -63,14 +105,14 @@
   }
 
   .nav-link{
-    display: inline-block;
-    position:relative;
+  //   display: inline-block;
+  //   position:relative;
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight:300;
-    color:set-text-color($primary-color);
-    text-decoration:none;
+    // color:set-text-color($primary-color);
+    // text-decoration:none;
     @include easeOut;
 
     &:hover{

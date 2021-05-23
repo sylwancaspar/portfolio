@@ -2,54 +2,55 @@
     [open]="open"
     (openEvent)="openClose($event)"
 ></app-nav-stripes>
-<div class="coverSidesBox">
-    <div 
-        class="coverSides"
-        [class]="openClass"
-        *ngIf="timeoutOpen"
-        >
-        {{ open }}
-    </div>
-    <div 
-        class="coverSides"
-        [class]="openClass"
-        *ngIf="timeoutOpen">
-        <ul>
-            <li 
-                class="nav-item current"
-                [class]="openClass" >
-                <a 
-                    class="nav-link"
-                    routerLink="/">
-                  Hem  
-                </a>
-            </li>
-            <li 
-                class="nav-item"
-                [class]="openClass">
-                <a 
-                    class="nav-link"
-                    routerLink="/">  
-                    Projekt
-                </a>
-            </li>
-            <li 
-                class="nav-item"
-                [class]="openClass">
-                <a 
-                    class="nav-link"
-                    routerLink="/"> 
-                    Om mig
-                </a>
-            </li>
-            <li class="nav-item"
-                [class]="openClass">
-                <a 
-                    class="nav-link"
-                    routerLink="/">  
-                    Kontakt
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
+
+<nav class="menu">
+        <div 
+            class="coverSides"
+            [class]="openClass"
+            *ngIf="timeoutOpen"
+            >
+            {{ open }}
+        </div>
+        <div 
+            class="coverSides"
+            [class]="openClass"
+            *ngIf="timeoutOpen">
+            <ul>
+                <li 
+                    class="nav-item current"
+                    [class]="openClass" >
+                    <a 
+                        class="nav-link"
+                        routerLink="/home">
+                    Hem  
+                    </a>
+                </li>
+                <li 
+                    class="nav-item"
+                    [class]="openClass">
+                    <a 
+                        class="nav-link"
+                        routerLink="/">  
+                        Projekt
+                    </a>
+                </li>
+                <li 
+                    class="nav-item"
+                    [class]="openClass">
+                    <a 
+                        class="nav-link"
+                        routerLink="/"> 
+                        Om mig
+                    </a>
+                </li>
+                <li class="nav-item"
+                    [class]="openClass">
+                    <a 
+                        class="nav-link"
+                        routerLink="/">  
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
