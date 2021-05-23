@@ -1,9 +1,11 @@
 .navboxStripes
 {
     position: fixed;
+    top: 1rem;
     right: 20px;
     padding: 0 0 0 0;
     cursor: pointer;
+    z-index: 10;
 
     .navStripes
     {

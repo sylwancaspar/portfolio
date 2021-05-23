@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CoverNavigationComponent implements OnInit {
 
   open:boolean = false;
+  timeoutOpen:boolean = false;
+  openClass = '';
 
   constructor() { }
 
@@ -17,6 +19,35 @@ export class CoverNavigationComponent implements OnInit {
   openClose(event)
   {
     this.open = event;
+    if(this.open)
+    {
+      this.timeoutOpen = this.open;
+      this.changeBodyClass()
+      setTimeout(()=>this.openClass = "show", 500)
+    }
+    else
+    {
+      this.openClass = "";
+      setTimeout(()=>{
+        this.timeoutOpen = this.open
+        this.changeBodyClass()
+      }, 500)
+      
+    }
+  }
+
+  changeBodyClass() 
+  {
+    const bodyElement = document.body;
+
+    if(this.open)
+    {
+      bodyElement.classList.add("open");
+    }
+    else
+    {
+      bodyElement.classList.remove("open");
+    }
   }
 
 }

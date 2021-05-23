@@ -53,6 +53,12 @@ body
     background: $primary-color;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
+	
+
+	&.open
+	{
+		overflow-x: hidden;
+	}
 }
 
 h1,

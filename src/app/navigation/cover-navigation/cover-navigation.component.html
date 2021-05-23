@@ -1,13 +1,19 @@
-
 <app-nav-stripes
     [open]="open"
     (openEvent)="openClose($event)"
 ></app-nav-stripes>
 <div class="coverSidesBox">
-    <div class="coverSides">{{ open }}</div>
     <div class="coverSides">
+        {{ open }}
+    </div>
+    <div 
+        class="coverSides"
+        [class]="openClass"
+        *ngIf="timeoutOpen">
         <ul>
-            <li class="nav-item current" >
+            <li 
+                class="nav-item current"
+                [class]="openClass" >
                 <a 
                     class="nav-link"
                     routerLink="/">
@@ -15,7 +21,8 @@
                 </a>
             </li>
             <li 
-                class="nav-item">
+                class="nav-item"
+                [class]="openClass">
                 <a 
                     class="nav-link"
                     routerLink="/">  
@@ -23,14 +30,16 @@
                 </a>
             </li>
             <li 
-                class="nav-item">
+                class="nav-item"
+                [class]="openClass">
                 <a 
                     class="nav-link"
                     routerLink="/"> 
                     Om mig
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item"
+                [class]="openClass">
                 <a 
                     class="nav-link"
                     routerLink="/">  

@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: stretch;
     border: solid black 2px;
-    //width: 50%;
+    
     .coverSides
     {
         display: flex;
@@ -15,13 +15,29 @@
         min-height: 100vh;
         justify-content: center;
         align-items: center;
-        border: solid black 2px;
+        
+        &:nth-child(1)
+        {
+            background-color: lighten( $primary-color , 5);
+        }
+
+        &.show
+        {
+            transform: translate3d(0px,0px,0);
+            @include easeOut;
+        }
+
+        &.close
+        {
+            transform: translate3d(0px,-600px,0);
+            @include easeOut;
+        }
         
     }
 }
 
 .nav-item{
-    transform: translate3d(00px,0,0);//600
+    transform: translate3d(600px,0,0);
     @include easeOut;
 
     &.show{
