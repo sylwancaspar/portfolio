@@ -3,7 +3,11 @@
     (openEvent)="openClose($event)"
 ></app-nav-stripes>
 <div class="coverSidesBox">
-    <div class="coverSides">
+    <div 
+        class="coverSides"
+        [class]="openClass"
+        *ngIf="timeoutOpen"
+        >
         {{ open }}
     </div>
     <div 

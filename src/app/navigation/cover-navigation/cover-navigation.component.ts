@@ -9,7 +9,7 @@ export class CoverNavigationComponent implements OnInit {
 
   open:boolean = false;
   timeoutOpen:boolean = false;
-  openClass = '';
+  openClass = 'close';
 
   constructor() { }
 
@@ -27,7 +27,7 @@ export class CoverNavigationComponent implements OnInit {
     }
     else
     {
-      this.openClass = "";
+      this.openClass = "close";
       setTimeout(()=>{
         this.timeoutOpen = this.open
         this.changeBodyClass()
