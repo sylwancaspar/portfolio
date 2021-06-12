@@ -2,14 +2,12 @@
     [open]="open"
     (openEvent)="openClose($event)"
 ></app-nav-stripes>
-
 <nav class="menu">
         <div 
             class="coverSides"
             [class]="openClass"
             *ngIf="timeoutOpen"
             >
-            {{ open }}
             <div class="portraite"></div>
         </div>
         <div 

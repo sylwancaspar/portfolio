@@ -19,15 +19,20 @@ export class CoverNavigationComponent implements OnInit {
   openClose(event)
   {
     this.open = event;
+    
     if(this.open)
     {
       this.timeoutOpen = this.open;
       this.changeBodyClass()
-      setTimeout(()=>this.openClass = "show", 500)
+      setTimeout(()=>{
+        this.openClass == "show"? this.openClass = "close": this.openClass = "show"
+      }, 500)
+      
     }
     else
     {
-      this.openClass = "close";
+
+      this.openClass != "close"? this.openClass = "close": this.openClass = "show"
       setTimeout(()=>{
         this.timeoutOpen = this.open
         this.changeBodyClass()
