@@ -31,7 +31,7 @@
     {
         z-index: 1;
         width: 65%;
-        background-color: darken(rgb($primary-color, 0.5) , 5);
+        background-color: darken(rgb($primary-color, 0.0) , 5);
         border-top-right-radius: 15rem;
         border-bottom-right-radius: 15rem;
 
@@ -76,6 +76,11 @@ a{
 
     a{
       padding: 0.4rem;
+      
+      &:nth-child(n+2)
+      {
+        margin-left: 2rem;
+      }
 
       &:hover{
         color: $secondary-color;
