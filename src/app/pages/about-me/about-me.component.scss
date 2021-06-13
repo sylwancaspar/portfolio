@@ -1,0 +1,139 @@
+@import "../../../scss/color";
+@import "../../../scss/config";
+
+
+#about
+{
+    margin:0.5rem;
+    color:#fff;
+}
+
+.text-secondary
+{
+    color: $secondary-color;
+}
+
+.md-heading
+{
+    font-size:4rem;
+      
+}
+
+.header-container
+{
+
+    display: flex;
+
+    .bio
+    {
+        margin-left: 2rem;
+    }
+
+    .h3-heading
+    {
+        font-size: 3rem;
+    }
+
+    p
+    {
+        font-size: 1.5rem;
+    }
+
+    .portraite-box
+    {
+        width: 35rem;
+        height: 15rem;
+    }
+    
+    .portraite
+    {
+         height: 100%;
+         width:  100%;
+        border-radius: 50%;
+        border:solid $secondary-color 3px;
+
+        background-image: url("../../../assets/img/portrait/portrait2.jpg");
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+
+    }
+
+}
+
+.merits
+{
+
+    margin-top: 2rem;
+
+    display:flex;
+    align-items: stretch;
+
+    h3
+    {
+        color: $secondary-color;
+        font-size: 1.2rem;
+    }
+
+    .head-w
+    {
+        font-size: 2rem;
+        color: $secondary-color;
+
+
+    }
+
+    .programig-skills
+    {
+        flex:1;
+        border: solid $secondary-color 5px;
+        padding: 0 1rem 1rem 1rem;
+
+        .lang, .spoken
+        {
+            h3
+            {
+                margin-top: 1rem;
+            }
+            
+            ul
+            {
+                margin-left: 3rem;
+            }            
+        }
+
+        .head-w:nth-child(n+2)
+        {
+            border-top: solid 3px $secondary-color;
+            margin-top: 1rem; 
+        }
+
+    }
+
+    .work-edu
+    {
+        flex: 3;
+        padding: 0 1rem 1rem 1rem;
+        
+        
+    }
+
+    .job
+    {
+        background: lighten( $primary-color , 5);
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+        margin-bottom: 0.5rem;
+
+        .time
+        {
+            margin-bottom: 1rem;
+        }
+
+        &:last-child
+        {
+           border-bottom: solid $secondary-color 5px; 
+        }
+       
+    }
+}
+

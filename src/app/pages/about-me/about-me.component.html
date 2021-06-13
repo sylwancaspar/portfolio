@@ -1,1 +1,104 @@
-<p>about-me works!</p>
+<main id="about">
+    <section class="header">
+        <h1 class="md-heading">Om <span class="text-secondary">mig</span> </h1>
+        <div class="header-container">
+            <div class="portraite-box">
+                <div class="portraite"></div>
+            </div>
+            <div class="bio">
+                <h3 class="text-secondary h3-heading">Kort om mig</h3>
+                <p>
+                    Jag är fullstackutvecklare och programmerar framförallt i Java.
+                    Jag kan även JavaScript, R, Python, HTML, CSS och många fler. Detta
+                    gör att jag kan lätt att anpassa mig till projektets behov. 
+                    Utöver det brinner jag för matematik, statistik och har ett stort intresse för maskininlärning. 
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="merits">
+        <div class="programig-skills">
+            <h2 class="head-w" >Program<wbr/>merings<wbr/>språk</h2>
+            <div class="lang">
+                <h3>Java</h3>
+                <ul>
+                    <li>Springboot</li>
+                    <li>Hibernate</li>
+                    <li>Thymeleaf</li>
+                    <li>JavaFX</li>
+                    <li>Selenium</li>
+                </ul>
+            </div>
+      	
+            <div class="lang">
+                <h3>Python</h3>
+                <ul>
+                    <li>Tkinter</li>
+                    <li>Numpy</li>
+                    <li>Panda</li>
+                    <li>Anaconda</li>
+                </ul>
+            </div>
+      	
+            <div class="lang">
+                <h3>R</h3>
+                <ul>
+                    <li>R-studio</li>      		
+                </ul>
+            </div>
+            <div class="lang">
+                <h3>JavaScript</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>DOM</li>
+                    <li>AJAX</li>
+                <li>Web Content Accessibility Guidelines (WCAG)</li>
+                </ul>
+            </div>
+
+            <div class="lang">
+            <h3>Frontend ramverk</h3>
+                <ul>
+                    <li>Angular</li>
+                    <li>Protractor (e2e)</li>
+                    <li>jasmine/karma (Unit testing)</li>
+                    <li>Rxjs</li>
+                    <li>Vue</li>
+                    <li>VueX</li>
+                </ul>
+            </div>       
+        
+            <div class="spoken">
+              <h2 class="head-w">Andra kunskaper</h2>
+                <h3>Språk</h3>
+                <ul>
+                  <li>Svenska - modersmål</li>
+                  <li>Engelska - flytande</li>
+                  <li>Franska - grundläggande</li>
+                  <li>Arabiska - grundläggande</li>
+                </ul>
+                <h3>Körkort</h3>
+                <ul>
+                  <li>B, D</li>
+                </ul>
+            </div> 
+        </div>
+
+        <div class="work-edu">
+            <h2 class="head-w">Arbetslivs<wbr/>erfarenhet</h2>
+            <div 
+                *ngFor="let work of workExperience; let index = i;"
+                class="job">
+                <h3 class="text-secondary">{{ work.heading }}</h3>
+                <h6 class="time">{{ work.from | date:'yyyy'}} - {{ !work.to? 'nuvarande': work.to | date:'yyyy'  }}</h6>
+                <p>
+                    {{ work.description }}
+                </p>
+            </div>
+ 
+        </div>
+
+
+    </section>
+</main>

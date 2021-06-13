@@ -31,6 +31,16 @@
                 <li 
                     class="nav-item"
                     [class]="openClass"
+                    [ngClass]="{'current': activeRoute =='/about'}">
+                    <a 
+                        class="nav-link"
+                        routerLink="/about"> 
+                        Om mig
+                    </a>
+                </li>
+                <li 
+                    class="nav-item"
+                    [class]="openClass"
                     [ngClass]="{'current': activeRoute =='/projects'}">
                     <a 
                         class="nav-link"
@@ -41,11 +51,11 @@
                 <li 
                     class="nav-item"
                     [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/about'}">
+                    [ngClass]="{'current': activeRoute =='/offer'}">
                     <a 
                         class="nav-link"
-                        routerLink="/about"> 
-                        Om mig
+                        routerLink="/offer"> 
+                        Erbjudande
                     </a>
                 </li>
                 <li class="nav-item"
