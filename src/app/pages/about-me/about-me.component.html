@@ -1,9 +1,12 @@
 <main id="about">
     <section class="header">
-        <h1 class="md-heading">Om <span class="text-secondary">mig</span> </h1>
+       <h1 class="md-heading">Om <span class="text-secondary">mig</span> </h1> 
         <div class="header-container">
+            
             <div class="portraite-box">
-                <div class="portraite"></div>
+                
+                <div class="portraite">
+                </div>
             </div>
             <div class="bio">
                 <h3 class="text-secondary h3-heading">Kort om mig</h3>
@@ -19,58 +22,19 @@
     <section class="merits">
         <div class="programig-skills">
             <h2 class="head-w" >Program<wbr/>merings<wbr/>språk</h2>
-            <div class="lang">
-                <h3>Java</h3>
+            <div 
+                *ngFor="let lang of programigSkills"
+                class="lang">
+                <h3>{{ lang.sprak }}</h3>
                 <ul>
-                    <li>Springboot</li>
-                    <li>Hibernate</li>
-                    <li>Thymeleaf</li>
-                    <li>JavaFX</li>
-                    <li>Selenium</li>
-                </ul>
-            </div>
-      	
-            <div class="lang">
-                <h3>Python</h3>
-                <ul>
-                    <li>Tkinter</li>
-                    <li>Numpy</li>
-                    <li>Panda</li>
-                    <li>Anaconda</li>
-                </ul>
-            </div>
-      	
-            <div class="lang">
-                <h3>R</h3>
-                <ul>
-                    <li>R-studio</li>      		
-                </ul>
-            </div>
-            <div class="lang">
-                <h3>JavaScript</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS</li>
-                    <li>DOM</li>
-                    <li>AJAX</li>
-                <li>Web Content Accessibility Guidelines (WCAG)</li>
-                </ul>
-            </div>
-
-            <div class="lang">
-            <h3>Frontend ramverk</h3>
-                <ul>
-                    <li>Angular</li>
-                    <li>Protractor (e2e)</li>
-                    <li>jasmine/karma (Unit testing)</li>
-                    <li>Rxjs</li>
-                    <li>Vue</li>
-                    <li>VueX</li>
+                    <li *ngFor="let librarie of lang.ramverk">
+                        {{ librarie }}
+                    </li>
                 </ul>
             </div>       
         
             <div class="spoken">
-              <h2 class="head-w">Andra kunskaper</h2>
+              <h2 class="head-w andra">Andra kunskaper</h2>
                 <h3>Språk</h3>
                 <ul>
                   <li>Svenska - modersmål</li>

@@ -19,8 +19,25 @@ export class AboutMeComponent implements OnInit {
   [
     {
       sprak: 'Java',
-      ramverk: ['Springboot', 'Hibernate/JPA', 'Thymeleaf', 'Java EE', 'JavaFX', 'Selenium']
-      
+      ramverk: ['Springboot', 'Hibernate/JPA', 'Thymeleaf', 'Java EE', 'JavaFX', 'Selenium']      
+    },
+    {
+     sprak: 'Python',
+     ramverk:['Tkinter','Numpy','Panda', 'Anaconda']
+    },
+    {
+      sprak:'R',
+      ramverk:['R-studio']
+    },
+    {
+      sprak:'Frontend bas',
+      ramverk:['HTML5', 'CSS', 'SCSS/SASS', 'AJAX', 'Web Content Accessibility Guidelines (WCAG)']
+    }
+    ,
+    {
+      sprak:'Frontend ramverk',
+      ramverk:['Angular 2+', 'Rxjs', 'Protractor (e2e)', 'Jasmine/Karma (Unit testing)', 'Vue', 'VueX']
+
     }
   ]
 

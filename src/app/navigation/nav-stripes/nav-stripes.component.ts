@@ -17,6 +17,7 @@ export class NavStripesComponent implements OnInit {
   classOpen:string = '';
 
   constructor() { }
+  
 
   ngOnInit(): void {
   }
