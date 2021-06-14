@@ -22,6 +22,7 @@ export class CoverNavigationComponent implements OnInit {
       if(val instanceof NavigationEnd)
       {
         this.activeRoute = val.url;
+        console.log(this.activeRoute)
       }
       
     });
