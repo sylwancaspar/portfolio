@@ -12,7 +12,7 @@
     
      .coverSides
      {
-        border: solid black 1px;
+        
         height: 100vh;
         width:50%;
         display: flex;
@@ -22,12 +22,12 @@
 
         &:nth-child(1)
         {
-          background-color: rgba(darken( $primary-color , 5), .9) ;
+          background-color: rgba(darken( $primary-color , 7), .95) ;
         }
 
         &:nth-child(2)
         {
-           background-color: rgba(lighten( $primary-color , 5), .7) ;
+           background-color: rgba(lighten( $primary-color , 7), .95) ;
         }
 
         &.show

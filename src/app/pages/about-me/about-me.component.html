@@ -52,12 +52,22 @@
         <div class="work-edu">
             <h2 class="head-w">Arbetslivs<wbr/>erfarenhet</h2>
             <div 
-                *ngFor="let work of workExperience; let index = i;"
+                *ngFor="let work of giveWork(); let index = i;"
                 class="job">
                 <h3 class="text-secondary">{{ work.heading }}</h3>
                 <h6 class="time">{{ work.from | date:'yyyy'}} - {{ !work.to? 'nuvarande': work.to | date:'yyyy'  }}</h6>
                 <p>
                     {{ work.description }}
+                </p>
+            </div>
+            <h2 class="head-w">Utbildning</h2>
+            <div 
+                *ngFor="let edu of giveEducation(); let index = i;"
+                class="edu lastline">
+                <h3 class="text-secondary">{{ edu.heading }}</h3>
+                <h6 class="time">{{ edu.place }},  {{ edu.from | date:'yyyy'}} - {{ !edu.to? 'nuvarande': edu.to | date:'yyyy'  }}</h6>
+                <p>
+                    {{ edu.description }}
                 </p>
             </div>
  
