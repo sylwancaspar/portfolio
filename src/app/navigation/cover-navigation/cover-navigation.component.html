@@ -15,13 +15,12 @@
             [class]="openClass"
             *ngIf="timeoutOpen">
             <ul>
-                <!--
-                    current
-                -->
+
                 <li 
                     class="nav-item "
                     [class]="openClass"
-                    [ngClass]="{'current': activeRoute == '/home'}" >
+                    [ngClass]="{'current': activeRoute == '/home'}"
+                    (click)="closeNavigation()" >
                     <a 
                         class="nav-link"
                         routerLink="/home"
@@ -32,7 +31,8 @@
                 <li 
                     class="nav-item"
                     [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/about'}">
+                    [ngClass]="{'current': activeRoute =='/about'}"
+                    (click)="closeNavigation()">
                     <a 
                         class="nav-link"
                         routerLink="/about"
@@ -43,7 +43,8 @@
                 <li 
                     class="nav-item"
                     [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/projects'}">
+                    [ngClass]="{'current': activeRoute =='/projects'}"
+                    (click)="closeNavigation()">
                     <a 
                         class="nav-link"
                         routerLink="/projects"
@@ -54,7 +55,8 @@
                 <li 
                     class="nav-item"
                     [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/offer'}">
+                    [ngClass]="{'current': activeRoute =='/offer'}"
+                    (click)="closeNavigation()">
                     <a 
                         class="nav-link"
                         routerLink="/offer"
@@ -64,7 +66,8 @@
                 </li>
                 <li class="nav-item"
                     [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/contact'}">
+                    [ngClass]="{'current': activeRoute =='/contact'}"
+                    (click)="closeNavigation()">
                     <a 
                         class="nav-link"
                         routerLink="/contact"

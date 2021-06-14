@@ -54,7 +54,7 @@ export class CoverNavigationComponent implements OnInit {
 
   closeNavigation()
   {
-    this.open = false;
+    this.openClose(false)
   }
 
   changeBodyClass() 

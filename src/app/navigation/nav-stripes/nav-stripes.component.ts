@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-nav-stripes',
   templateUrl: './nav-stripes.component.html',
   styleUrls: ['./nav-stripes.component.scss']
 })
-export class NavStripesComponent implements OnInit {
+export class NavStripesComponent implements OnInit, OnChanges {
 
   @Input()
   open:boolean;
@@ -17,6 +17,9 @@ export class NavStripesComponent implements OnInit {
   classOpen:string = '';
 
   constructor() { }
+  ngOnChanges(changes: SimpleChanges): void {
+    this.openCloseFromParent()
+  }
   
 
   ngOnInit(): void {
@@ -27,6 +30,13 @@ export class NavStripesComponent implements OnInit {
     this.open = !this.open;
     this.classOpen = this.open? 'turned': '';
     this.openEvent.emit(this.open)
+  }
+
+  openCloseFromParent()
+  {
+    
+    this.classOpen = this.open? 'turned': '';
+    //this.openEvent.emit(this.open)
   }
    
 }
