@@ -185,3 +185,11 @@
 
 }
 
+@media screen and (min-width: 992px)
+{
+
+    .show-only-on-small
+    {
+        display: none;
+    }
+}
