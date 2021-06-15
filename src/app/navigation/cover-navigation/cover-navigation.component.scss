@@ -67,7 +67,7 @@
 
     font-size: 30px;
     text-transform: uppercase;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     font-weight:300;
     
     @include easeOut;
@@ -132,11 +132,12 @@
 
            
   }
+  .nav-item{
+    transform: translate3d(1200px,0,0);
+  }
 }
 
-.nav-item{
-  transform: translate3d(-600px,0,0);
-}
+
 
 
 
