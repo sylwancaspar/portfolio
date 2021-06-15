@@ -151,3 +151,37 @@
     }
 }
 
+@media screen and (max-width: 992px)
+{
+    .header-container
+    {
+        flex-direction: column;
+    }
+
+    .show-only-on-big
+    {
+        display: none;
+    }
+
+    .header 
+    {
+        text-align: center;
+
+        .portraite-box
+        {
+            margin-top: 1.5rem;
+        }
+
+        .bio
+        {
+            margin: 0.5rem;
+        }
+    }
+
+    .merits
+    {
+        flex-direction: column;
+    }
+
+}
+
