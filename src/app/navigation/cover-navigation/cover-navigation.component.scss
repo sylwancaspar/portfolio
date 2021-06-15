@@ -121,15 +121,22 @@
       {
         &:nth-child(1)
         {
-          transform: translate3d(100%, 0%,0);
+          transform: translate3d(-100%, 0%,0);
         }
         &:nth-child(2)
         {
-          transform: translate3d(-100%, 0%,0);
+          transform: translate3d(100%, 0%,0);
         }     
       }
     }
 
+  ul
+  {
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+  }
            
   }
   .nav-item{
