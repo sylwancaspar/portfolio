@@ -89,3 +89,30 @@ a{
       }
     }
   }
+
+@media screen and (max-width: 992px)
+{
+  .homeContainer
+  {
+    justify-content: center;
+  }
+
+  .lg-heading
+  {
+    text-align: center;
+    line-height: 1.2;
+    
+  }
+
+  .sm-heading
+  {
+    text-align: center;
+  }
+
+  .icons
+  {
+    display: flex;
+    justify-content: center;
+    
+  }
+}
