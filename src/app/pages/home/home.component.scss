@@ -95,7 +95,15 @@ a{
   .homeContainer
   {
     justify-content: center;
+
+    .presentation
+    {
+      padding-left: 0;
+      width: 100%;
+    }
   }
+
+  
 
   .lg-heading
   {
