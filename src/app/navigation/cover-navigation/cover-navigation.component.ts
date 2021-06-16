@@ -72,4 +72,22 @@ export class CoverNavigationComponent implements OnInit {
     }
   }
 
+  isHome()
+  {
+    if(this.activeRoute.length < 3)
+    {
+      console.log("active 1", this.activeRoute)
+      return this.openClass +' current'
+    }
+    else if(this.activeRoute.includes("home"))
+    {
+      console.log("active 2", this.activeRoute)
+      return this.openClass +' current'
+    }
+    else
+    {
+      return this.openClass;
+    } 
+  }
+
 }
