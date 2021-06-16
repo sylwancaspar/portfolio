@@ -18,7 +18,7 @@
 
                 <li 
                     class="nav-item "
-                    [class]="isHome()"
+                    [class]="isHome('home')"
                     (click)="closeNavigation()" >
                     <a 
                         class="nav-link"
@@ -29,8 +29,7 @@
                 </li>
                 <li 
                     class="nav-item"
-                    [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/about'}"
+                    [class]="isHome('about')"
                     (click)="closeNavigation()">
                     <a 
                         class="nav-link"
@@ -41,8 +40,7 @@
                 </li>
                 <li 
                     class="nav-item"
-                    [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/projects'}"
+                    [class]="isHome('projects')"
                     (click)="closeNavigation()">
                     <a 
                         class="nav-link"
@@ -53,8 +51,7 @@
                 </li>
                 <li 
                     class="nav-item"
-                    [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/offer'}"
+                    [class]="isHome('offer')"
                     (click)="closeNavigation()">
                     <a 
                         class="nav-link"
@@ -64,8 +61,7 @@
                     </a>
                 </li>
                 <li class="nav-item"
-                    [class]="openClass"
-                    [ngClass]="{'current': activeRoute =='/contact'}"
+                    [class]="isHome('/contact')"
                     (click)="closeNavigation()">
                     <a 
                         class="nav-link"
