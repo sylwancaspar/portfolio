@@ -19,10 +19,10 @@ export class CoverNavigationComponent implements OnInit {
   ngOnInit(): void {
   
     this.router.events.subscribe((val) => {
+
       if(val instanceof NavigationEnd)
       {
-        this.activeRoute = val.url;
-        console.log(this.activeRoute)
+        this.activeRoute = val.urlAfterRedirects;
       }
       
     });
@@ -76,13 +76,11 @@ export class CoverNavigationComponent implements OnInit {
   {
     navUrl = navUrl.split('/').join('')
     if(navUrl.length < 2)
-    {
-      console.log("active 1", this.activeRoute)
+    {      
       return this.openClass +' current'
     }
     else if(this.activeRoute.includes(navUrl))
     {
-      console.log("active 2", this.activeRoute)
       return this.openClass +' current'
     }
     else
