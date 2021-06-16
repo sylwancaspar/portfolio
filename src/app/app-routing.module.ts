@@ -7,12 +7,13 @@ import { OfferComponent } from './pages/offer/offer.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 
 const routes: Routes = [
-  {path:'', redirectTo: 'home', pathMatch: 'full'},
+  
   {path:'home', component: HomeComponent},
   {path:'projects', component: ProjectsComponent},
   {path:'about', component: AboutMeComponent},
   {path:'contact', component: ContactComponent},
-  {path:'offer', component: OfferComponent}
+  {path:'offer', component: OfferComponent},
+  {path:'', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
