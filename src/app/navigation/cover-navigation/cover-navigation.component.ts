@@ -74,7 +74,7 @@ export class CoverNavigationComponent implements OnInit {
 
   isHome()
   {
-    if(this.activeRoute.length < 3)
+    if(this.activeRoute.length < 2)
     {
       console.log("active 1", this.activeRoute)
       return this.openClass +' current'

@@ -67,8 +67,12 @@
 
     font-size: 30px;
     text-transform: uppercase;
-    padding: 1.5rem 0;
+    padding: 0;
+    margin: 2rem;
     font-weight:300;
+    a{
+      padding: 1rem;
+    }
     
     @include easeOut;
 

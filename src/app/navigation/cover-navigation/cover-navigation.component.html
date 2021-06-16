@@ -18,8 +18,7 @@
 
                 <li 
                     class="nav-item "
-                    [class]="openClass"
-                    [ngClass]="{'current': isHome()}"
+                    [class]="isHome()"
                     (click)="closeNavigation()" >
                     <a 
                         class="nav-link"
