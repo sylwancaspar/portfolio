@@ -158,6 +158,12 @@
         flex-direction: column;
     }
 
+    .show-only-on-small
+    {
+        line-height: 0.8;
+        margin-bottom: 1rem;
+    }
+
     .show-only-on-big
     {
         display: none;
