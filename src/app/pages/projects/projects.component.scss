@@ -52,6 +52,7 @@
     margin-bottom: 0.3rem;
     border-radius: 5px;
     transition: background-color .5s ease;
+
     &:hover{
       background-color: $secondary-color;
       color: set-text-color($secondary-color);
@@ -87,9 +88,17 @@
 @media screen and (max-width: 992px)
 {
 
-    #work
+    .md-heading
     {
-        opacity:1;
+        line-height: 1;
+    }
+
+    .lg-heading
+    {
+      
+      line-height: 0.8;
+      font-size: 4rem;
+      margin-bottom: 1rem;    
     }
 
    
@@ -97,6 +106,14 @@
 
 @media screen and (max-width: 500px)
 {
-    
+    .lg-heading
+    {
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
 
+    .md-heading
+    {
+        font-size: 1.5rem;
+    }
 }
