@@ -12,4 +12,9 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getUrl(urlString)
+  {
+    return  "url('" + urlString + "')";
+  }
+
 }

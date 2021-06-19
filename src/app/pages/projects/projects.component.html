@@ -7,7 +7,10 @@
     <div class="projects">
         <div class="item">
           <a href="https://github.com/sylwancaspar/homepage" >
-            <div class="photo"></div>
+            <div 
+                [ngStyle]="{'background-image': getUrl('../../../assets/img/projects/webbPortfolio.png')}"
+                class="photo">
+            </div>
           </a>
           <a href="index.html" class="btn-ligth">
             <i class="fas fa-eye">Projects</i>
@@ -25,19 +28,25 @@
 
     <div class="projects">
         <div class="item">
-          <a href="https://github.com/sylwancaspar/homepage" >
-            <div class="photo"></div>
+          <a href="https://casparsylwan.github.io/movienight/" >
+            <div 
+                class="photo"
+                [ngStyle]="{'background-image': getUrl('../../../assets/img/projects/movie.png')}"
+                >
+            </div>
           </a>
-          <a href="index.html" class="btn-ligth">
-            <i class="fas fa-eye">Projects</i>
+          <a href="https://casparsylwan.github.io/movienight/" class="btn-ligth">
+            &nbsp; <i class="fas fa-eye">Projects</i>
           </a>
-          <a href="https://github.com/sylwancaspar/homepage" class="btn-dark">
-            <i class="fab fa-github">Github</i>
+          <a href="https://github.com/casparsylwan/movienight" class="btn-dark">
+            &nbsp; <i class="fab fa-github">Github</i>
           </a>
           <div class="btn-text">
-            Webbportfolion är helt klientbaserad och byggd med Node.js,
-             Sass, html och JavaScript. Projektet består av fyra sidor en Välkomstsida,
-              CV, portfolio och en rest API för att skicka E-post.  
+            (Work in progress) En biografhemsida där det går att beställa godis,
+            mat och dryck till 20 personer. Detta levereras sedan till sittplatsen. 
+            Alla beställningar separeras så att det ska bli lätt att se vem som ska betala vad.
+            Projektet är helt gjort med Angular. Alla animationer är gjorda med CSS och TypeScript.
+            Sista sidan när det kommer till betalning är borttagen så att ingen ska bli lurad. 
           </div>
         </div>
     </div>

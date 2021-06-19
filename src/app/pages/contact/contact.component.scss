@@ -61,7 +61,7 @@
 
     #contact
     {
-        margin: auto;
+        margin: 1rem;
         //line-height: 1.2;
     }
 
@@ -86,7 +86,13 @@
 
 @media screen and (max-width: 500px)
 {
-    .lg-heading, .md-heading
+    #contact
+    {
+        margin: 0.3rem;
+        //line-height: 1.2;
+    }
+    
+    .lg-heading
     {
         margin-top: 3rem;
         font-size: 3rem;
