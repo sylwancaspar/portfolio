@@ -18,6 +18,12 @@
     margin-bottom: 2rem;
 }
 
+.projects
+{
+    //border: solid black 1px;
+    display: flex;
+}
+
 //btn style
 
 .item
@@ -25,7 +31,8 @@
     
     display: flex;
     flex-direction: column;
-    width: 280px;   
+    width: 280px;
+    margin-bottom: 1rem;   
 }
 
 .photo {
@@ -87,6 +94,10 @@
 
 @media screen and (max-width: 992px)
 {
+    #work
+    {
+        margin: 1rem;
+    }
 
     .md-heading
     {
@@ -106,6 +117,11 @@
 
 @media screen and (max-width: 500px)
 {
+    .projects
+    {
+        justify-content: center;
+    }
+    
     .lg-heading
     {
         margin-top: 3rem;
