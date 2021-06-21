@@ -1,0 +1,22 @@
+<div class="item">
+    <a href="{{ project.href }}" >
+      <div 
+          class="photo"
+          [ngStyle]="{'background-image': getUrl(project.photoPath)}"
+          >
+          <!--
+              C:\Users\46739\Desktop\portfolio\new-portfolio\portfolio\src\assets\img\projects\movie.png
+          -->
+      </div>
+    </a>
+    <a href="{{ project.href }}" class="btn-ligth">
+       <i class="fas fa-eye">&nbsp;Projects</i>
+    </a>
+    <a href="{{project.githubUrl}}" class="btn-dark">
+       <i class="fab fa-github">&nbsp;Github</i>
+    </a>
+    <div class="btn-text">
+      {{ project.description }}
+    </div>
+  </div>
+
