@@ -6,6 +6,7 @@
 {
     margin:0.5rem;
     color:#fff;
+    background: $primary-color;
 }
 
 .text-secondary
@@ -86,6 +87,12 @@
     {
         color: $secondary-color;
         font-size: 1.2rem;
+    }
+
+    .heading-box
+    {
+        display:flex;
+        justify-content: space-between;
     }
 
     .head-w

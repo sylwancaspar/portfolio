@@ -1,4 +1,4 @@
-<main id="about">
+<main id="about" #couponPage>
     <section class="header">
        <h1 class="md-heading show-only-on-big">Om <span class="text-secondary">mig</span> </h1> 
         <div class="header-container">
@@ -49,9 +49,11 @@
                 </ul>
             </div> 
         </div>
-
+        
         <div class="work-edu">
-            <h2 class="head-w">Arbetslivs<wbr/>erfarenhet</h2>
+            <div class="heading-box">
+                <h2 class="head-w">Arbetslivs<wbr/>erfarenhet</h2><button (click)="htmlToPdf()" >PDF</button>
+            </div>    
             <div 
                 *ngFor="let work of giveWork(); let index = i;"
                 class="job">

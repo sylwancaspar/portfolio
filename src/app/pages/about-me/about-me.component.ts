@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+
+
+
 
 @Component({
   selector: 'app-about-me',
@@ -6,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
+
+  @ViewChild('couponPage', { static: true }) couponPage: ElementRef;
 
   constructor() { }
 
@@ -143,6 +150,27 @@ export class AboutMeComponent implements OnInit {
   {
     return this.workExperience
       .filter(work => work.type == 'education')
+  }
+
+  htmlToPdf() 
+  {
+
+    let DATA = document.getElementById('about');
+  
+    html2canvas(DATA).then(canvas => {
+    
+      let fileWidth = 210;
+      let pageHeight = 295;
+      let fileHeight = canvas.height * fileWidth / canvas.width;
+      console.log(canvas.height)
+      console.log(fileHeight)
+      const FILEURI = canvas.toDataURL('image/png')
+      let PDF = new jsPDF('p', 'mm', 'a4');
+      let position = 0;
+      PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight)
+      //While för fler sidor
+      PDF.save('angular-demo.pdf');
+  }); 
   }
 
 }
