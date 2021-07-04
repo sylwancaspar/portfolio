@@ -149,7 +149,7 @@ export class AboutMeComponent implements OnInit {
 
   htmlToPdf() 
   {
-    let tab =  window.open('/about-pdf', "_blank");
+    let tab =  window.open('about-pdf', "_blank");
      setTimeout(()=> tab.close(), 1000);
   }
 
