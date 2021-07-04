@@ -1,0 +1,213 @@
+$background:#fff;
+$primary-color: #000;/*#fff; */
+$secondary-color: #eece1a;
+$text-second: #900;
+$cobolt: #1338bc;
+
+
+
+
+#about-pdf
+{
+    width: 240mm;
+    margin:1rem;
+    padding: 0.5rem;
+    color: darken( $cobolt , 10);
+    background: $background;
+}
+
+.flex
+{
+    display:flex;
+    &.col
+    {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 2rem;
+
+    }
+    &.space
+    {
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+.header-container
+{
+
+     display: flex;
+     align-items: flex-start;
+}
+
+p
+{
+    font-size: 1.5rem;
+    color: darken($cobolt, 10) ;
+}
+
+.portraite-box
+{       
+    padding: 0rem;
+    display: flex;
+    align-items: center;       
+}
+
+.contact
+{
+    
+    flex:4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+        h3
+        {
+            font-size: 2rem;
+            font-weight: bold;
+
+            // span
+            // {
+            //     color: $text-second;
+            // }
+        }
+
+        h4
+        {
+            // color: $text-second;
+            font-size: 1.5rem;
+        }
+
+        h6, a
+        {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: darken( $cobolt , 10);
+        }
+    }
+        
+    
+    
+    .portraite
+    {
+        height: 14rem;
+        width:  14rem;
+        border-radius: 50%;
+        border:solid $cobolt 3px;//$secondary-color
+
+        background-image: url("../../../assets/img/portrait/profil-bild-2021-07.jpg");
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+
+    }
+
+
+
+.merits
+{
+
+    margin-top: 0.5rem;
+
+    display:flex;
+    align-items: stretch;
+
+    h3
+    {
+        color: lighten( $cobolt , 5);//$secondary-color;
+        font-size: 1.2rem;
+    }
+
+    .heading-box
+    {
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .head-w
+    {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $cobolt ;//$secondary-color;
+
+
+    }
+
+    .programig-skills
+    {
+        flex:1;
+        border: solid $cobolt 2px;//$secondary-color
+        border-radius: 10px;
+        padding: 0 1rem 1rem 1rem;
+        height: fit-content;
+
+        color: $cobolt;
+
+        .lang, .spoken
+        {
+            h3
+            {
+                margin-top: 0.5rem;
+                font-style: italic;
+            }
+            
+            ul
+            {
+                margin-left: 3rem;
+            }            
+        }
+
+        .head-w:nth-child(n+2)
+        {
+            border-top: solid 3px $cobolt;// $secondary-color;
+            margin-top: 1rem; 
+        }
+
+    }
+
+    .work-edu
+    {
+        flex: 3;
+        padding: 0 1rem 1rem 1rem;
+        
+        
+    }
+
+    .job, .edu
+    {
+        // padding: 0.5rem 0.5rem 1rem 0.5rem;
+        margin-bottom: 0.5rem;
+
+        .text-secondary
+        {
+            //color: darken($text-second, 10);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .time
+        {
+            padding: 0.2rem 0 0 1rem;
+            color: lighten( $cobolt , 5);
+            
+        }
+
+        p
+        {
+            color: lighten( $cobolt , 5);
+            font-size: 1rem;
+        }
+       
+    }
+
+    .box-1:nth-child(2)
+    {
+        margin-left: 3rem;
+    }
+
+    // .job:nth-child(8), .lastline:last-child
+    // {
+    //     border-bottom: solid $secondary-color 5px;//$secondary-color 
+    // }
+}
+

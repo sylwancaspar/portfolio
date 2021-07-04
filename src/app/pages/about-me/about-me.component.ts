@@ -1,9 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-
-
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-me',
@@ -12,9 +8,8 @@ import html2canvas from 'html2canvas';
 })
 export class AboutMeComponent implements OnInit {
 
-  @ViewChild('couponPage', { static: true }) couponPage: ElementRef;
 
-  constructor() { }
+  constructor( private router:Router ) { }
 
   ngOnInit(): void {
   }
@@ -154,23 +149,8 @@ export class AboutMeComponent implements OnInit {
 
   htmlToPdf() 
   {
-
-    let DATA = document.getElementById('about');
-  
-    html2canvas(DATA).then(canvas => {
-    
-      let fileWidth = 210;
-      let pageHeight = 295;
-      let fileHeight = canvas.height * fileWidth / canvas.width;
-      console.log(canvas.height)
-      console.log(fileHeight)
-      const FILEURI = canvas.toDataURL('image/png')
-      let PDF = new jsPDF('p', 'mm', 'a4');
-      let position = 0;
-      PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight)
-      //While för fler sidor
-      PDF.save('angular-demo.pdf');
-  }); 
+    let tab =  window.open('/about-pdf', "_blank");
+     setTimeout(()=> tab.close(), 1000);
   }
 
 }

@@ -11,6 +11,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { OfferComponent } from './pages/offer/offer.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
+import { AboutMePdfComponent } from './pages/about-me-pdf/about-me-pdf.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectItemComponent } from './components/project-item/project-item.com
     ProjectsComponent,
     ContactComponent,
     OfferComponent,
-    ProjectItemComponent
+    ProjectItemComponent,
+    AboutMePdfComponent
   ],
   imports: [
     BrowserModule,

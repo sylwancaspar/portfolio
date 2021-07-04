@@ -1,6 +1,8 @@
-<main id="about" #couponPage>
+<main id="about">
+    <button class="load show-only-on-small" (click)="htmlToPdf()" >Ladda ner cv</button>
     <section class="header">
-       <h1 class="md-heading show-only-on-big">Om <span class="text-secondary">mig</span> </h1> 
+       <h1 class="md-heading show-only-on-big">Om <span class="text-secondary">mig</span> </h1>
+       <button class="load show-only-on-big" (click)="htmlToPdf()" >Ladda ner cv</button>
         <div class="header-container">
             
             <div class="portraite-box">
@@ -52,7 +54,7 @@
         
         <div class="work-edu">
             <div class="heading-box">
-                <h2 class="head-w">Arbetslivs<wbr/>erfarenhet</h2><button (click)="htmlToPdf()" >PDF</button>
+                <h2 class="head-w">Arbetslivs<wbr/>erfarenhet</h2>
             </div>    
             <div 
                 *ngFor="let work of giveWork(); let index = i;"
