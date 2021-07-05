@@ -12,7 +12,7 @@ export class AboutMePdfComponent implements OnInit, AfterViewInit {
 
   constructor(private router:Router) { }
   ngAfterViewInit(): void {
-      this.htmlToPdf()
+      // this.htmlToPdf()
   }
 
   ngOnInit(): void {

@@ -12,6 +12,7 @@ $cobolt: #1338bc;
     width: 240mm;
     margin:1rem;
     padding: 0.5rem;
+    padding-left: 1.5rem;
     color: darken( $cobolt , 10);
     background: $background;
 }
@@ -50,7 +51,8 @@ p
 {       
     padding: 0rem;
     display: flex;
-    align-items: center;       
+    align-items: center;
+    margin-left: 0.5rem;       
 }
 
 .contact
