@@ -1,0 +1,32 @@
+@import "../../../scss/config";
+@import "../../../scss/color";
+
+.lang
+{
+    position: fixed;
+
+    top: 1rem;
+    right: 6rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+
+    display: flex;
+    p
+    {
+        margin-left: 0.5rem;
+
+        &:hover{
+            color: $secondary-color;
+            @include easeOut();
+            
+        }
+    }
+
+    .active
+    {
+        color: $secondary-color;
+        @include easeOut();
+    }
+}

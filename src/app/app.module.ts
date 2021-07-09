@@ -12,6 +12,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { OfferComponent } from './pages/offer/offer.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { AboutMePdfComponent } from './pages/about-me-pdf/about-me-pdf.component';
+import { ChangeLanguageComponent } from './navigation/change-language/change-language.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AboutMePdfComponent } from './pages/about-me-pdf/about-me-pdf.component
     ContactComponent,
     OfferComponent,
     ProjectItemComponent,
-    AboutMePdfComponent
+    AboutMePdfComponent,
+    ChangeLanguageComponent
   ],
   imports: [
     BrowserModule,

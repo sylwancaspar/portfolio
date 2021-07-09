@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { StateService } from 'src/app/service/state.service';
 
 @Component({
   selector: 'app-cover-navigation',
@@ -14,9 +15,21 @@ export class CoverNavigationComponent implements OnInit {
 
   activeRoute:string = '';
 
-  constructor(private router: Router) { }
+  lang:string;
+  homeNav:string;
+  aboutMeNav:string;
+  projectsNav:string;
+  contactNav:string;
+
+
+  constructor(private router: Router, private state:StateService) { }
 
   ngOnInit(): void {
+
+    this.state.language.subscribe((lang) => {
+      this.lang = lang;
+      this.changeLang(lang);
+    })
   
     this.router.events.subscribe((val) => {
 
@@ -26,6 +39,25 @@ export class CoverNavigationComponent implements OnInit {
       }
       
     });
+  }
+
+  changeLang(language:string)
+  {
+    if(language=='sv')
+    {
+      this.homeNav = 'Hem';
+      this.aboutMeNav = 'Om mig';
+      this.projectsNav = 'Projekt';
+      this.contactNav = 'Kontakt';
+    }
+    else
+    {
+      this.homeNav = 'Home';
+      this.aboutMeNav = 'About me';
+      this.projectsNav = 'Projects';
+      this.contactNav = 'Contact';
+
+    }
   }
 
   openClose(event)

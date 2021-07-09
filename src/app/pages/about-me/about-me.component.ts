@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { Merits } from 'src/app/models/merits';
+import { StateService } from 'src/app/service/state.service';
 
 @Component({
   selector: 'app-about-me',
@@ -8,132 +10,45 @@ import { Router } from '@angular/router';
 })
 export class AboutMeComponent implements OnInit {
 
+  merits:Merits = new Merits();
 
-  constructor( private router:Router ) { }
+  lang;
+  aboutMeText;
+  workExperience;
+  programigSkills;
+  downloadCv:string;
+  spokenLang
+
+  constructor( private router:Router, private state:StateService ) { }
 
   ngOnInit(): void {
+
+    this.state.language.subscribe((lang) =>{
+      this.changeLang(lang); 
+    })
   }
 
-  programigSkills:{
-        sprak:string,
-        ramverk:string[]
-  }[] = 
-  [
+  changeLang(lang:string)
+  {
+    this.lang = lang
+    if(lang == 'sv')
     {
-      sprak: 'Java',
-      ramverk: ['Springboot', 'Hibernate/JPA', 'Thymeleaf', 'Java EE', 'JavaFX', 'Selenium (e2e)', 'Junit 5 (Unit testing)', "Mockito  (Unit testing)"]      
-    },
-    {
-     sprak: 'Python',
-     ramverk:['Tkinter','Numpy','Panda', 'Anaconda']
-    },
-    {
-      sprak:'R',
-      ramverk:['R-studio']
-    },
-    {
-      sprak:'TypeScript',
-      ramverk:['Leaflet', 'Chart.js']
-    },
-    {
-      sprak:'Frontend bas',
-      ramverk:['HTML5', 'CSS', 'SCSS/SASS', 'AJAX', 'Web Content Accessibility Guidelines (WCAG)', 'Bootstrap']
+      this.workExperience = this.merits.swedishCV();
+      this.programigSkills = this.merits.svProgramingTools();
+      this.aboutMeText = this.merits.aboutMeSv();
+      this.downloadCv = 'Ladda ner cv';
+      this.spokenLang = this.merits.getSpokenLanguageSv()     
     }
-    ,
+    else
     {
-      sprak:'Frontend ramverk',
-      ramverk:['Angular 2+', 'Rxjs', 'Protractor (e2e)', 'Jasmine/Karma (Unit testing)', 'Vue', 'VueX']
-
-    },
-    {
-      sprak:'Git',
-      ramverk:['']
+      this.workExperience = this.merits.englishCV();
+      this.programigSkills = this.merits.engProgramingTools();
+      this.aboutMeText = this.merits.aboutMeEng();
+      this.downloadCv = 'Download cv';
+      this.spokenLang = this.merits.getSpokenLanguageEng()
     }
-  ]
+  }
 
-  workExperience:{heading:string,
-                  type:string,
-                  place?:string,
-                  from:Date,
-                  to:Date,
-                  description:string}[]=
-                   [
-                     {
-                       heading:"Arbetsförmedlingen IT – Solna",
-                       type:'work',
-                       from: new Date("2020-01-01"),
-                       to: null, 
-                       description: "Utvecklare främst frontend men även backend"
-                     }
-                     ,
-                     {
-                      heading:"Arbetsförmedlingen – Järfälla",
-                      type:'work',
-                      from: new Date("2017-01-01"),
-                      to: new Date('2020-01-01'), 
-                      description: "Handleda och vägleda arbetssökande i deras sökande efter ett nytt jobb."
-                    },
-                    {
-                      heading:"Kista Bibliotek",
-                      type:'work',
-                      from: new Date('2015-01-01'),
-                      to: new Date('2016-01-01'),
-                      description:"Planera och utveckla arbetet med digitala resurser och kanaler på biblioteket. Fungera som digital pedagog samt agera innehållsproducent i digitala kanaler. Ansvara för vissa statistikuppgifter."
-                    },
-                    {
-                      heading:"Kulturskolan",
-                      type:'work',
-                      from: new Date('2013-01-01'),
-                      to: new Date('2015-01-01'),
-                      description:"Driva cirkusenheten på Kulturskolan Stockholm. Detta inkluderar planerandet, genomförandet och utvärderandet utav Cirkusverksamheten. Leda det pedagogiska arbetet med medarbetarna."
-                    },
-                    {
-                      heading:"The Palestinian Circus School",
-                      type:'work',
-                      from: new Date('2012-01-01'),
-                      to: new Date('2013-01-01'),
-                      description:"Pedagogisk samordnare"
-                    },
-                    {
-                      heading:"Kulturskolan",
-                      type:'work',
-                      from: new Date('2008-01-01'),
-                      to: new Date('2012-01-01'),
-                      description:"Driva cirkusenheten på Kulturskolan Stockholm. Detta inkluderar planerandet, genomförandet och utvärderandet utav Cirkusverksamheten. Leda det pedagogiska arbetet med medarbetarna."
-                    }
-                    ,
-                    {
-                      heading:"The BOX entertainment",
-                      type:'work',
-                      from: new Date('1999-01-01'),
-                      to: new Date('2008-01-01'),
-                      description:"Egen företagare och frilansartist Producera, budgetera och marknadsföra konstnärliga event. Medverkade i produktioner som Melodiefestivalen, Super cirkör och flera andra."
-                    },
-                    {
-                      heading: "Yrkeshögskoleexamen Javautvecklare",
-                      place:"IT-högskolan",
-                      type: 'education',
-                      from: new Date('2019-01-01'),
-                      to: new Date('2021-01-01'),
-                      description: "Fullstack, både back-end och front-end."
-                    },
-                    {
-                      heading: "Kandidatexamen i Nationalekonomi",
-                      place: "Stockholms Universitet",
-                      type: 'education',
-                      from: new Date('2019-01-01'),
-                      to: new Date('2021-01-01'),
-                      description: "Inkluderande 60 hp i matematik och statistik. Dessa 60hp inkluderade flera kurser i linjäralgebra, envariabelsanalys, flervariabelsanalys, regressionsanalys, Multivariata metoder, Avancerad programmering i R."
-                    },
-                    {
-                      heading: "Konstnärlig kandidatexamen i scenkonst",
-                      place:"BELGIEN",
-                      type: 'education',
-                      from: new Date('2019-01-01'),
-                      to: new Date('2021-01-01'),
-                      description: "L’Ecole Supérieure des Arts du Cirque – ESAC"
-                    }
-                  ]
 
   giveWork()
   {

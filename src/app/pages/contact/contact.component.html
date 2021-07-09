@@ -1,11 +1,13 @@
 <main id="contact"> 
-    <h1 class="lg-heading">Kontakta <span class="text-secondary"> mig</span> </h1>
+    <h1 *ngIf="lang == 'sv'" class="lg-heading">Kontakta <span class="text-secondary"> mig</span> </h1>
+    <h1 *ngIf="lang == 'eng'" class="lg-heading">Contact <span class="text-secondary"> me</span> </h1>
     
 
     <div class="contact">
             <h3 class="text-secondary">Caspar Sylwan</h3>
             <h6>tel: 073 92 88 437</h6>
-            <h6>E-post: casparsylwan@gmail.com</h6>
+            <h6 *ngIf="lang == 'sv'">E-post: casparsylwan@gmail.com</h6>
+            <h6 *ngIf="lang == 'eng'">Email: casparsylwan@gmail.com</h6>
            
     </div>
 
@@ -15,22 +17,40 @@
         <form id="fs-frm" name="contact-form" accept-charset="utf-8" action="https://formspree.io/casparsylwan@gmail.com" method="post">
             <fieldset id="fs-frm-inputs">
 
-            <h2 class="md-heading" ><span class="text-secondary" >Skicka</span>  ett meddelande!</h2>    
+            <h2 *ngIf="lang == 'sv'" class="md-heading" ><span class="text-secondary" >Skicka</span>  ett meddelande!</h2>
+            <h2 *ngIf="lang == 'eng'" class="md-heading" ><span class="text-secondary" >Send</span>  a message!</h2>    
+    
 
-                <div class="input-box">
+                <div *ngIf="lang == 'sv'" class="input-box">
                     <label for="full-name">Namn</label>
                     <input type="text" name="name" id="full-name" placeholder="Förnamn efternamn" required="">
                 </div>
 
-                <div class="input-box">
+                <div *ngIf="lang == 'sv'" class="input-box">
                     <label for="email-address">E-post Address</label>
                     <input type="email" name="_replyto" id="email-address" placeholder="dinEpost@här.nu" required="">
                 </div>
 
-                <div class="input-box">
+                <div *ngIf="lang == 'sv'" class="input-box">
                     <label for="message">Meddelande</label>
                     <textarea rows="6" name="message" id="message" placeholder="Skriv ett meddelande här!" required=""></textarea>
                 </div>
+
+                <div *ngIf="lang == 'eng'" class="input-box">
+                    <label for="full-name">Namn</label>
+                    <input type="text" name="name" id="full-name" placeholder="first name, surname" required="">
+                </div>
+
+                <div *ngIf="lang == 'eng'" class="input-box">
+                    <label for="email-address">Email</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="yourEmail@here.now" required="">
+                </div>
+
+                <div *ngIf="lang == 'eng'" class="input-box">
+                    <label for="message">Meddelande</label>
+                    <textarea rows="6" name="message" id="message" placeholder="Write a message to me!" required=""></textarea>
+                </div>
+
 
             </fieldset>
         </form>
