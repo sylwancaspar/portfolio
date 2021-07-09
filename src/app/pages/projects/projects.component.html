@@ -1,6 +1,8 @@
 <main id="work">
-    <h1 class="lg-heading">Mina <span class="text-secondary">projekt</span> </h1>
-    <h2 class="md-heading">Några av mina projekt!</h2>
+    <h1 *ngIf="lang == 'sv'" class="lg-heading">Mina <span class="text-secondary">projekt</span> </h1>
+    <h1 *ngIf="lang == 'eng'" class="lg-heading">My <span class="text-secondary">projects</span> </h1>
+    <h2 *ngIf="lang == 'sv'" class="md-heading">Några av mina projekt!</h2>
+    <h2 *ngIf="lang == 'eng'" class="md-heading">Some of my projects!</h2>
 
 
 
