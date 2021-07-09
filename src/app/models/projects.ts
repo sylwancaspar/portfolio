@@ -22,16 +22,16 @@ export class ProjectClass{
             type:"project",
             href:"https://github.com/sylwancaspar/portfolio",
             githubUrl:"https://github.com/sylwancaspar/portfolio",
-            photoPath:"./assets/img/projects/webbPortfolio.png",
+            photoPath:"./assets/img/projects/webbPortfolioNew.png",
             description:"A new remake of my homepage with Angular 11 and StateMangement built in with Rxjs. Faster to load with more modern tools then my old home page."
         },
-        {
-          type:"project",
-          href:"https://github.com/sylwancaspar/homepage",
-          githubUrl:"https://github.com/sylwancaspar/homepage",
-          photoPath:"./assets/img/projects/webbPortfolio.png",
-          description:"Webbportfolio is writen in vanila javascript, Node.js, Sass, html, and is completly clientbased. The project consists of 4 pages Welcomepage, CV, portfolio a contact page that is conected by an restApi to an emailservice."
-        },
+        // {
+        //   type:"project",
+        //   href:"https://github.com/sylwancaspar/homepage",
+        //   githubUrl:"https://github.com/sylwancaspar/homepage",
+        //   photoPath:"./assets/img/projects/webbPortfolio.png",
+        //   description:"Webbportfolio is writen in vanila javascript, Node.js, Sass, html, and is completly clientbased. The project consists of 4 pages Welcomepage, CV, portfolio a contact page that is conected by an restApi to an emailservice."
+        // },
         {
           type:"project",
           href:"https://casparsylwan.github.io/movienight/",
@@ -74,13 +74,13 @@ export class ProjectClass{
             photoPath:"./assets/img/projects/webbPortfolioNew.png",
             description:"Detta är en omtagning av min gamla hemsida, men denna gång gjord med Angular 11. Hemsidan laddar nu fortare koden är renare och har fler funktionaliteter."
         },
-        {
-          type:"project",
-          href:"https://github.com/sylwancaspar/homepage",
-          githubUrl:"https://github.com/sylwancaspar/homepage",
-          photoPath:"./assets/img/projects/webbPortfolio.png",
-          description:"Webbportfolion är helt klientbaserad och byggd med Node.js, Sass, html och JavaScript. Projektet består av fyra sidor en Välkomstsida, CV, portfolio och en rest API för att skicka E-post."
-        },
+        // {
+        //   type:"project",
+        //   href:"https://github.com/sylwancaspar/homepage",
+        //   githubUrl:"https://github.com/sylwancaspar/homepage",
+        //   photoPath:"./assets/img/projects/webbPortfolio.png",
+        //   description:"Webbportfolion är helt klientbaserad och byggd med Node.js, Sass, html och JavaScript. Projektet består av fyra sidor en Välkomstsida, CV, portfolio och en rest API för att skicka E-post."
+        // },
         {
           type:"project",
           href:"https://casparsylwan.github.io/movienight/",
