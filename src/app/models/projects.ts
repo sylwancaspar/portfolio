@@ -23,7 +23,7 @@ export class ProjectClass{
             href:"https://github.com/sylwancaspar/portfolio",
             githubUrl:"https://github.com/sylwancaspar/portfolio",
             photoPath:"./assets/img/projects/webbPortfolioNew.png",
-            description:"A new remake of my homepage with Angular 11 and StateMangement built in with Rxjs. Faster to load and with more modern tools than my older home page."
+            description:"A new remake of my homepage with Angular 11 and StateMangement built in with Rxjs. Faster to load and with more modern tools than my older homepage."
         },
         // {
         //   type:"project",
