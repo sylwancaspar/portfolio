@@ -11,7 +11,7 @@
 
             <div class="contact">
                 <h3 >Caspar <span>Sylwan</span></h3>
-                <h4>Webutvecklare, programmerare & fullstack</h4>
+                <h4>Web developer, programmer & fullstack</h4>
                 <div class="flex space">
                     <h6><i class="fas fa-mobile-alt"></i> 073 92 88 437</h6>
                     <h6><i class="fas fa-at"></i> casparsylwan@gmail.com</h6>
@@ -28,7 +28,7 @@
     <!-- MERITS BEGINS HERE -->
     <section class="merits">
         <div class="programig-skills">
-            <h2 class="head-w" >PROGRAMMRINGSPRÅK</h2>
+            <h2 class="head-w" >{{ 'Programing languages' | uppercase }}</h2>
             <div 
                 *ngFor="let lang of programigSkills"
                 class="lang">
@@ -41,38 +41,24 @@
                 </ul>
             </div>       
         
-            <!-- <div class="spoken">
-              <h2 class="head-w andra">Andra kunskaper</h2>
-                <h3>Språk</h3>
-                <ul>
-                  <li>Svenska - modersmål</li>
-                  <li>Engelska - flytande</li>
-                  <li>Franska - grundläggande</li>
-                  <li>Arabiska - grundläggande</li>
-                </ul>
-                <h3>Körkort</h3>
-                <ul>
-                  <li>B, D</li>
-                </ul>
-            </div>  -->
         </div>
         
         <div class="work-edu">
             <div class="heading-box">
-                <h2 class="head-w">ARBETSLIVSERFARENHET</h2>
+                <h2 class="head-w"> {{ 'Experience' | uppercase }} </h2>
             </div>    
             <div 
                 *ngFor="let work of giveWork(); let index = i;"
                 class="job">
                 <div class="flex">
                     <h3 class="text-secondary">{{ work.heading }}</h3>
-                    <h6 class="time">{{ work.from | date:'yyyy'}} - {{ !work.to? 'nuvarande': work.to | date:'yyyy'  }}</h6>
+                    <h6 class="time">{{ work.from | date:'yyyy'}} - {{ !work.to? 'present': work.to | date:'yyyy'  }}</h6>
                 </div>
                 <p>
                     {{ work.description }}
                 </p>
             </div>
-            <h2 class="head-w">UTBILDNING</h2>
+            <h2 class="head-w">{{ 'Education' | uppercase }}</h2>
             <div 
                 *ngFor="let edu of giveEducation(); let index = i;"
                 class="edu">
@@ -85,19 +71,16 @@
                 </p>
             </div>
             <div class="spoken">
-                <h2 class="head-w andra">Andra kunskaper</h2>
+                <h2 class="head-w andra">{{ 'other' | uppercase }}</h2>
                 <div class="flex">
                     <div class="box-1">
-                    <h3>Språk</h3>
+                    <h3>Language</h3>
                     <ul>
-                        <li>Svenska - modersmål</li>
-                        <li>Engelska - flytande</li>
-                        <li>Franska - grundläggande</li>
-                        <li>Arabiska - grundläggande</li>
+                        <li *ngFor="let lang of spokenLanguages">{{ lang.lang }} - {{ lang.level }}</li>
                     </ul>
                     </div> 
                     <div class="box-1"> 
-                        <h3>Körkort</h3>
+                        <h3>Driving license</h3>
                         <ul>
                             <li>B, D</li>
                         </ul>

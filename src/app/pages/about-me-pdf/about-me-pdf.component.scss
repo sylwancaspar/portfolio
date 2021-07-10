@@ -10,6 +10,7 @@ $cobolt: #1338bc;
 #about-pdf
 {
     width: 240mm;
+    // height: 295mm;
     margin:1rem;
     padding: 0.5rem;
     padding-left: 1.5rem;
@@ -68,15 +69,10 @@ p
             font-size: 2rem;
             font-weight: bold;
 
-            // span
-            // {
-            //     color: $text-second;
-            // }
         }
 
         h4
         {
-            // color: $text-second;
             font-size: 1.5rem;
         }
 
@@ -130,9 +126,7 @@ p
     {
         font-size: 1.2rem;
         font-weight: bold;
-        color: $cobolt ;//$secondary-color;
-
-
+        color: $cobolt;
     }
 
     .programig-skills
@@ -170,14 +164,11 @@ p
     .work-edu
     {
         flex: 3;
-        padding: 0 1rem 1rem 1rem;
-        
-        
+        padding: 0 1rem 1rem 1rem;        
     }
 
     .job, .edu
     {
-        // padding: 0.5rem 0.5rem 1rem 0.5rem;
         margin-bottom: 0.5rem;
 
         .text-secondary
@@ -206,10 +197,5 @@ p
     {
         margin-left: 3rem;
     }
-
-    // .job:nth-child(8), .lastline:last-child
-    // {
-    //     border-bottom: solid $secondary-color 5px;//$secondary-color 
-    // }
-}
+ }
 
