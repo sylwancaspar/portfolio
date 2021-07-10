@@ -55,7 +55,7 @@ export class ProjectClass{
           githubUrl:"https://github.com/casparsylwan/TravelAgencyBackend",
           photoPath:"./assets/img/projects/flyux-backend.png",
           description:
-          "(Work in progress) This is the backend of a Travelagency. The backend is built with Spring boot, Spring security and secured with JWT (Json Web Toke), JPA/Hibernate and Postgressql  as database. The backend is hosted on Heroku with a pipline to my github." 
+          "(Work in progress) Order a trip with FlyUX. This is the backend of a Travel agency. The backend is built with Spring boot, Spring security and secured with JWT (Json Web Toke), JPA/Hibernate and Postgressql as database. The backend is hosted on Heroku with a pipeline from my github. " 
         }
       ]
     
@@ -104,9 +104,7 @@ export class ProjectClass{
           githubUrl:"https://github.com/casparsylwan/TravelAgencyBackend",
           photoPath:"./assets/img/projects/flyux-backend.png",
           description:
-          "(Work in progress) Beställ en resa med FlyUX. Detta projekt är Backend till projektet och ligger på Heroku."+
-          "Det hör ihop med backend FlyUx som är byggt med Spring boot och Postgress sql." +
-          "En automatisk build pipline är byggd till Heroku." 
+          "(Work in progress) Beställ en resa med FlyUX. Detta projekt är Backend till projektet och ligger på Heroku. Det hör ihop med backend FlyUx som är byggt med Spring boot och Postgress sql. En automatisk build pipeline är byggd till Heroku. " 
         }
       ]
     
