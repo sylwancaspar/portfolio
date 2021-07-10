@@ -23,7 +23,7 @@ export class ProjectClass{
             href:"https://github.com/sylwancaspar/portfolio",
             githubUrl:"https://github.com/sylwancaspar/portfolio",
             photoPath:"./assets/img/projects/webbPortfolioNew.png",
-            description:"A new remake of my homepage with Angular 11 and StateMangement built in with Rxjs. Faster to load with more modern tools then my old home page."
+            description:"A new remake of my homepage with Angular 11 and StateMangement built in with Rxjs. Faster to load and with more modern tools than my older home page."
         },
         // {
         //   type:"project",
@@ -38,7 +38,8 @@ export class ProjectClass{
           githubUrl:"https://github.com/casparsylwan/movienight",
           photoPath:"./assets/img/projects/movie.png",
           description:
-          "(Work in progress) A fictive movie theater that where I played around with 3d css in the selection folder. Here i worked on passing props between the the diffrent components."
+          "(Work in progress) A website for a fictive cinema where you can even order food, candies and drinks that serves to your seat in the cinema room. It is for for 20 people. All orders are being listed seperately as to make it easier to see who orders and pays what. "+ 
+          "The project is built with Angular. All animations are made with CSS and TypeScript. The payment page is removed as not to confuse navigators. "
         },
         {
           type:"project",
@@ -46,7 +47,7 @@ export class ProjectClass{
           githubUrl:"https://github.com/casparsylwan/TravelAgency",
           photoPath:"./assets/img/projects/flyux.png",
           description:
-          "(Work in progress) This is the frontend of a travelagency.  The frontend is bult with Angular 11 Rxjs. No external libraries have been used for the frontend. The frontend is hosted on github and it communicates with the backed by restful API service." 
+          "(Work in progress) This is the frontend of a travel agency. The frontend is built with Angular 11 Rxjs. No external libraries have been used for the frontend. The frontend is hosted on github and it communicates with the backend by restful API service. " 
         },
         {
           type:"project",
@@ -72,7 +73,7 @@ export class ProjectClass{
             href:"https://github.com/sylwancaspar/portfolio",
             githubUrl:"https://github.com/sylwancaspar/portfolio",
             photoPath:"./assets/img/projects/webbPortfolioNew.png",
-            description:"Detta är en omtagning av min gamla hemsida, men denna gång gjord med Angular 11. Hemsidan laddar nu fortare koden är renare och har fler funktionaliteter."
+            description:"Detta är en omtagning av min gamla hemsida, men denna gång gjord med Angular 11. Hemsidan laddar nu fortare, koden är renare och har fler funktionaliteter."
         },
         // {
         //   type:"project",
@@ -87,11 +88,7 @@ export class ProjectClass{
           githubUrl:"https://github.com/casparsylwan/movienight",
           photoPath:"./assets/img/projects/movie.png",
           description:
-          "(Work in progress) En biografhemsida där det går att beställa godis,"+
-          "mat och dryck till 20 personer. Detta levereras sedan till sittplatsen." +
-          "Alla beställningar separeras så att det ska bli lätt att se vem som ska betala vad." +
-          "Projektet är helt gjort med Angular. Alla animationer är gjorda med CSS och TypeScript." +
-          "Sista sidan när det kommer till betalning är borttagen så att ingen ska bli lurad."
+          "(Work in progress) En biografhemsida där det går att beställa godis, mat och dryck till 20 personer. Detta levereras sedan till sittplatsen. Alla beställningar separeras så att det ska bli lätt att se vem som ska betala vad. Projektet är helt gjort med Angular. Alla animationer är gjorda med CSS och TypeScript. Sista sidan när det kommer till betalning är borttagen så att ingen ska bli lurad."
         },
         {
           type:"project",
@@ -99,9 +96,7 @@ export class ProjectClass{
           githubUrl:"https://github.com/casparsylwan/TravelAgency",
           photoPath:"./assets/img/projects/flyux.png",
           description:
-          "(Work in progress) Beställ en resa med FlyUX. Detta projekt är fronted till projektet och ligger på Github-pages."+
-          "Det hör ihop med backend FlyUx som är byggt med Spring boot och Postgress sql." +
-          "En automatisk build pipline är byggd till Heroku." 
+          "(Work in progress) Beställ en resa med FlyUX. Detta projekt är fronted till projektet och ligger på Github-pages. Det hör ihop med backend FlyUx som är byggt med Spring boot och Postgress sql. En automatisk build pipline är byggd till Heroku. " 
         },
         {
           type:"project",
