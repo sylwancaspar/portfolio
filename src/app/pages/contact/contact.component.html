@@ -15,42 +15,49 @@
 
   <div class="contact-form">
         <!-- <form id="fs-frm"  > -->
-            <fieldset id="fs-frm-inputs">
+            
 
-            <h2 *ngIf="lang == 'sv'" class="md-heading" ><span class="text-secondary" >Skicka</span>  ett meddelande!</h2>
-            <h2 *ngIf="lang == 'eng'" class="md-heading" ><span class="text-secondary" >Send</span>  a message!</h2>    
+            <fieldset id="fs-frm-inputs">
+                <section *ngIf="messageSent" class="messageSent">
+                    <h1 *ngIf="lang == 'sv'" class="lg-heading">Tack för ditt <span class="text-secondary"> meddelande</span> </h1>
+                    <h1 *ngIf="lang == 'eng'" class="lg-heading">Thank you for <span class="text-secondary">your message</span> </h1>
+                </section>
+                
+
+            <h2 *ngIf="lang == 'sv' && !messageSent" class="md-heading" ><span class="text-secondary" >Skicka</span>  ett meddelande!</h2>
+            <h2 *ngIf="lang == 'eng' && !messageSent" class="md-heading" ><span class="text-secondary" >Send</span>  a message!</h2>    
     
 
-                <div *ngIf="lang == 'sv'" class="input-box">
+                <div *ngIf="lang == 'sv' && !messageSent" class="input-box">
                     <label for="full-name">Namn</label>
                     <input [formControl]="nameForm" type="text" name="name" id="full-name" placeholder="Förnamn efternamn">
                 </div>
 
-                <div *ngIf="lang == 'sv'" class="input-box">
+                <div *ngIf="lang == 'sv' && !messageSent" class="input-box">
                     <label for="email-address">E-post Address</label>
                     <input [formControl]="emailForm" type="email" name="_replyto" id="email-address" placeholder="dinEpost@här.nu">
                 </div>
 
-                <div *ngIf="lang == 'sv'" class="input-box">
+                <div *ngIf="lang == 'sv' && !messageSent" class="input-box">
                     <label for="message">Meddelande</label>
                     <textarea [formControl]="messageForm" rows="6" name="message" id="message" placeholder="Skriv ett meddelande här!"></textarea>
                 </div>
 
-                <div *ngIf="lang == 'eng'" class="input-box">
+                <div *ngIf="lang == 'eng' && !messageSent" class="input-box">
                     <label for="full-name">Namn</label>
                     <input [formControl]="nameForm" type="text" name="name" id="full-name" placeholder="first name, surname" >
                 </div>
 
-                <div *ngIf="lang == 'eng'" class="input-box">
+                <div *ngIf="lang == 'eng' && !messageSent" class="input-box">
                     <label for="email-address">Email</label>
                     <input [formControl]="emailForm" type="email" name="_replyto" id="email-address" placeholder="yourEmail@here.now" >
                 </div>
 
-                <div *ngIf="lang == 'eng'" class="input-box">
+                <div *ngIf="lang == 'eng' && !messageSent" class="input-box">
                     <label for="message">Meddelande</label>
                     <textarea [formControl]="messageForm" rows="6" name="message" id="message" placeholder="Write a message to me!"></textarea>
                 </div>
-                <button class="load" (click)="sendEmail()" > {{ buttonText }} </button>
+                <button *ngIf="!messageSent" class="load" (click)="sendEmail()" > {{ buttonText }} </button>
 
             </fieldset>
         <!-- </form> -->

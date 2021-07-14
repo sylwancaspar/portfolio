@@ -17,6 +17,7 @@ export class ContactComponent implements OnInit {
   nameForm = new FormControl(''); 
   emailForm = new FormControl('');
   messageForm = new FormControl('')
+  messageSent:boolean = false;
 
   // contactForm = this.fb.group({
   //   firstname: [''],
@@ -61,9 +62,20 @@ export class ContactComponent implements OnInit {
     this.emailService.sendEmail(email).subscribe(
       (response)=>
       {
-        console.log("OK");
+        console.log("OK", response);
     },
-    err => console.log(err));
+    err => {
+      if(err.status<300)
+      {
+        this.nameForm.setValue('')
+        this.emailForm.setValue('')
+        this.messageForm.setValue('');
+        this.messageSent = true;
+      } 
+      console.log("OK", err.ok)
+      console.log("err", err)
+    
+    });
    }
 
 }
