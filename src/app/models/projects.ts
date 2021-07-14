@@ -25,13 +25,13 @@ export class ProjectClass{
             photoPath:"./assets/img/projects/webbPortfolioNew.png",
             description:"A new remake of my homepage with Angular 11 and StateMangement built in with Rxjs. Faster to load and with more modern tools than my older homepage."
         },
-        // {
-        //   type:"project",
-        //   href:"https://github.com/sylwancaspar/homepage",
-        //   githubUrl:"https://github.com/sylwancaspar/homepage",
-        //   photoPath:"./assets/img/projects/webbPortfolio.png",
-        //   description:"Webbportfolio is writen in vanila javascript, Node.js, Sass, html, and is completly clientbased. The project consists of 4 pages Welcomepage, CV, portfolio a contact page that is conected by an restApi to an emailservice."
-        // },
+        {
+          type:"project",
+          href:"https://github.com/sylwancaspar/emailHompage",
+          githubUrl:"https://github.com/sylwancaspar/emailHompage",
+          photoPath:"./assets/img/projects/backend-emailservice.png",
+          description:"Email service conntected to gmail and deployed on Heroku. The whole service is written in Java using spring-boot. The portfolio frontend is connected to email service by a rest endpoint."
+        },
         {
           type:"project",
           href:"https://casparsylwan.github.io/movienight/",
@@ -75,13 +75,13 @@ export class ProjectClass{
             photoPath:"./assets/img/projects/webbPortfolioNew.png",
             description:"Detta är en omtagning av min gamla hemsida, men denna gång gjord med Angular 11. Hemsidan laddar nu fortare, koden är renare och har fler funktionaliteter."
         },
-        // {
-        //   type:"project",
-        //   href:"https://github.com/sylwancaspar/homepage",
-        //   githubUrl:"https://github.com/sylwancaspar/homepage",
-        //   photoPath:"./assets/img/projects/webbPortfolio.png",
-        //   description:"Webbportfolion är helt klientbaserad och byggd med Node.js, Sass, html och JavaScript. Projektet består av fyra sidor en Välkomstsida, CV, portfolio och en rest API för att skicka E-post."
-        // },
+        {
+          type:"project",
+          href:"https://github.com/sylwancaspar/emailHompage",
+          githubUrl:"https://github.com/sylwancaspar/emailHompage",
+          photoPath:"./assets/img/projects/backend-emailservice.png",
+          description:"Email servicen är kopplad till gmail och produktionsatt på Heroku. Tjänsten är helt skriven i Java, spring-boot. Hemsidan är kopplad till email tjänsten via en rest api endpoint."
+        },
         {
           type:"project",
           href:"https://casparsylwan.github.io/movienight/",
