@@ -167,12 +167,21 @@ export class Merits{
     to:Date,
     description:string}[]=
      [
+        {
+          heading:"SJ AB, Swedish State Railways",
+          place: 'Stockholm',
+          type:'work',
+          from: new Date("2021-11-01"),
+          to: null, 
+          description: "Fullstack Developer, (backend)  Java Spring boot, (cloud) Azure kubernetes, pipelines and React as frontend"
+        }
+        ,
        {
             heading:"Swedish Public Employment Service",
             place: 'Solna',
             type:'work',
             from: new Date("2020-01-01"),
-            to: null, 
+            to: new Date("2021-10-01"), 
             description: "Developer, focus on frontend"
        }
        ,
@@ -265,11 +274,20 @@ export class Merits{
                   to:Date,
                   description:string}[]=
                    [
+                      {
+                        heading:"SJ AB, Statens Järnvägar",
+                        place: 'Stockholm',
+                        type:'work',
+                        from: new Date("2021-11-01"),
+                        to: null, 
+                        description: "Fullstackutvecklare, (backend) fullstack Java Spring boot, (cloud) Azure kubernetes, pipelines och React som frontend"
+                      }
+                      ,
                      {
                        heading:"Arbetsförmedlingen IT – Solna",
                        type:'work',
                        from: new Date("2020-01-01"),
-                       to: null, 
+                       to: new Date("2021-10-01"), 
                        description: "Utvecklare främst frontend men även backend"
                      }
                      ,

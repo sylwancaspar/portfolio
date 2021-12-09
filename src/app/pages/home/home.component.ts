@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from 'src/app/service/state.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  lang:string;
+
+  constructor(private state:StateService) { }
 
   ngOnInit(): void {
+    this.state.language.subscribe((lang)=>{
+      this.lang = lang;
+    })
   }
 
 }

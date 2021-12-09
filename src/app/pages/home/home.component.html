@@ -2,7 +2,9 @@
 
     <div class="presentation">
         <h1 class="lg-heading">Caspar <span class="text-secondary">Sylwan</span> </h1>
-        <h2 class="sm-heading">Web developer, programmer & fullstack</h2>
+        <h2 *ngIf="lang == 'eng'" class="sm-heading" [class]='lang'>Web developer, programmer & fullstack</h2>
+        <h2 *ngIf="lang == 'sv'" class="sm-heading" [class]='lang'>Webbutvecklare, programmerare & fullstack</h2>
+
         <div class="icons">
             <a href="https://github.com/sylwancaspar">
                 <i class="fab fa-github fa-2x"></i>
