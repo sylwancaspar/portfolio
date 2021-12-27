@@ -19,14 +19,7 @@ export class ContactComponent implements OnInit {
   messageForm = new FormControl('')
   messageSent:boolean = false;
 
-  // contactForm = this.fb.group({
-  //   firstname: [''],
-  //   lastname: [''],
-  //   email: [''],
-  //   gender: [''],
-  //   isMarried: [''],
-  //   country: [''],
-  // });
+  
 
   constructor(private state:StateService,
               private emailService:MessagingService,
