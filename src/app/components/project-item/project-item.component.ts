@@ -10,9 +10,7 @@ export class ProjectItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log("project", this.project)
-  }
+  ngOnInit(): void {}
 
   getUrl(urlString)
   {

@@ -51,11 +51,9 @@ export class ContactComponent implements OnInit {
       subject :"Homepage form by email " + this.emailForm.value,
       message : this.nameForm.value + " " + this.messageForm.value
     }
-    console.log(email);
     this.emailService.sendEmail(email).subscribe(
       (response)=>
       {
-        console.log("OK", response);
     },
     err => {
       if(err.status<300)
